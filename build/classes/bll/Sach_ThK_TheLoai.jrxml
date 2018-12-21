@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="b28c92f7-32d6-4027-a0cc-5d6cc1bce7ed">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="table" fontName="Arial" pdfEncoding="Identity-H">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="VNTextNoBorder" fontName="Arial" pdfEncoding="Identity-H"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT THE_LOAI AS [Thể loại], COUNT(MA_SACH) AS [Số lượng] FROM SACH GROUP BY THE_LOAI]]>
+	</queryString>
+	<field name="Thể loại" class="java.lang.String"/>
+	<field name="Số lượng" class="java.lang.Integer"/>
+	<group name="Thể loại">
+		<groupExpression><![CDATA[$F{Thể loại}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="244" splitType="Stretch">
+			<staticText>
+				<reportElement style="VNTextNoBorder" x="292" y="0" width="263" height="25" uuid="2cc61f73-6bb5-4279-a040-fea7204a93f8"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="VNTextNoBorder" x="292" y="25" width="263" height="25" uuid="7a262de9-de2c-4959-b8f3-bee0bc449854"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Độc lập - Tự do – Hạnh phúc]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="VNTextNoBorder" x="0" y="0" width="274" height="25" uuid="09d939ab-0317-4919-8c77-b0a7d530a7f4"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TRƯỜNG ĐẠI HỌC BÁCH KHOA HÀ NỘI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="VNTextNoBorder" x="98" y="25" width="152" height="25" uuid="12dc0c6d-92a9-4349-a182-fcade1b75637"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Thư viện Tạ Quang Bửu]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="VNTextNoBorder" x="122" y="50" width="102" height="25" uuid="ff5cdf98-a3c6-4f5d-92d1-66ba87875954"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Trần Tuấn Hiệp]]></text>
+			</staticText>
+			<image>
+				<reportElement x="20" y="25" width="88" height="123" uuid="548ce7b8-8fcd-4245-95d7-cbe2016516eb"/>
+				<imageExpression><![CDATA["F:\\CODE\\Project 1\\eclipse-workspace\\LibraryManagement\\src\\forms\\hustLogo.jpg"]]></imageExpression>
+			</image>
+			<textField pattern="dd/MM/yyyy h.mm a">
+				<reportElement style="VNTextNoBorder" x="292" y="128" width="263" height="20" uuid="fe93cb57-a383-4498-8e33-78a88bea00ef"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="VNTextNoBorder" x="0" y="213" width="555" height="31" uuid="75747fdd-0b48-4ba1-914f-af61ddc8cc01"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font fontName="Arial" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA["THỐNG KÊ SỐ LƯỢNG ĐẦU SÁCH THEO THỂ LOẠI"]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="59" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="34" splitType="Stretch">
+			<staticText>
+				<reportElement style="table" x="122" y="0" width="196" height="34" uuid="e6744157-809b-498f-a171-2727c9ccbe49"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Thể loại]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="table" x="318" y="0" width="113" height="34" uuid="dbbf5a96-0b1a-41e4-9a04-5e55951794ba"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Số lượng]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="25" splitType="Stretch">
+			<textField>
+				<reportElement style="table" x="122" y="0" width="196" height="25" uuid="0a53503c-5a0e-40ac-aeba-8a9fe5c36e16"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="12"/>
+					<paragraph leftIndent="20"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Thể loại}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="table" x="318" y="0" width="113" height="25" uuid="0ba3cc9b-54d2-4930-884f-6822e3086347"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Số lượng}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="46" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="27" splitType="Stretch">
+			<textField>
+				<reportElement style="VNTextNoBorder" x="212" y="0" width="80" height="20" uuid="69681131-0328-4fdf-9702-5724bb70ded5"/>
+				<textElement textAlignment="Right">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement style="VNTextNoBorder" x="292" y="0" width="40" height="20" uuid="ae91b034-c8b8-4950-bc94-203d496fe8ee"/>
+				<textElement>
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="210" splitType="Stretch">
+			<staticText>
+				<reportElement style="VNTextNoBorder" x="68" y="23" width="129" height="25" uuid="fa13dc51-fda3-4de2-8e05-6f5817d4af14"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Người lập]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="VNTextNoBorder" x="348" y="23" width="129" height="25" uuid="5d31884d-92bc-45b3-8baf-533bd1ea8dbb"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Xác nhận của thủ thư]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="VNTextNoBorder" x="68" y="48" width="129" height="25" uuid="34a8d8d6-d36d-4d45-8e63-fc2f52e5d714"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="12" isBold="false" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[(Ký và ghi rõ họ tên)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="VNTextNoBorder" x="348" y="48" width="129" height="25" uuid="dbbad00e-5820-42fe-9dae-65588ce80eb7"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="12" isBold="false" isItalic="true" pdfEncoding="Cp1252"/>
+				</textElement>
+				<text><![CDATA[(Ký và ghi rõ họ tên)]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>

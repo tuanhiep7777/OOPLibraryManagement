@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="56bed98a-4829-4a45-87da-a78cd2d8cd27">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="124"/>
+	<style name="table" fontName="Arial" pdfEncoding="Identity-H">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="VNTextNoBorder" fontName="Arial" pdfEncoding="Identity-H"/>
+	<parameter name="TieuChi" class="java.lang.String"/>
+	<parameter name="TenBC" class="java.lang.String"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT 1]]>
+	</queryString>
+	<field name="COLUMN_0" class="java.lang.String"/>
+	<field name="COLUMN_1" class="java.lang.Integer"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="245" splitType="Stretch">
+			<textField>
+				<reportElement style="VNTextNoBorder" x="0" y="214" width="555" height="31" uuid="70ab7c1c-ee0e-43ea-86d4-07e664014ed0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font fontName="Arial" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{TenBC}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="VNTextNoBorder" x="292" y="27" width="263" height="25" uuid="8b98a785-7bd7-41e1-bfa8-40316c3edd59"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Độc lập - Tự do – Hạnh phúc]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="VNTextNoBorder" x="-1" y="2" width="274" height="25" uuid="1bfd31e4-58ed-49f2-978a-f548108246db"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TRƯỜNG ĐẠI HỌC BÁCH KHOA HÀ NỘI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="VNTextNoBorder" x="97" y="27" width="152" height="25" uuid="cdb6ba97-a51e-4ba3-aff8-3fd987d69199"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Thư viện Tạ Quang Bửu]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="VNTextNoBorder" x="291" y="2" width="263" height="25" uuid="daf65565-a5f2-4140-bd0a-6c699e858b4b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy h.mm a">
+				<reportElement style="VNTextNoBorder" x="292" y="130" width="263" height="20" uuid="a1a65693-1095-43f4-9fe6-d7c1b3c436ba"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="19" y="27" width="88" height="123" uuid="9d6aa286-5886-420d-a605-99ccd25b04a3"/>
+				<imageExpression><![CDATA["F:\\CODE\\Project 1\\eclipse-workspace\\LibraryManagement\\src\\forms\\hustLogo.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement style="VNTextNoBorder" x="121" y="52" width="102" height="25" uuid="50dfd7e5-cab1-4485-acd7-f0d9b4b3f344"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Trần Tuấn Hiệp]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="59" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="35" splitType="Stretch">
+			<staticText>
+				<reportElement style="table" x="313" y="0" width="113" height="34" uuid="2acfd2e1-1b87-486b-9ca1-fa60743a4811"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Số lượng]]></text>
+			</staticText>
+			<textField>
+				<reportElement style="table" x="117" y="0" width="196" height="34" uuid="7188c228-a36a-4458-ac06-3ddd5189ddae"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{TieuChi}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="25" splitType="Stretch">
+			<textField>
+				<reportElement style="table" x="117" y="0" width="196" height="25" uuid="d6adf174-a986-4d2b-b400-4b4a09cfc52e"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="12"/>
+					<paragraph leftIndent="20"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{COLUMN_0}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="table" x="313" y="0" width="113" height="25" uuid="87ebf1b4-4a9f-49e4-ba47-7a6ef3c7d3e7"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{COLUMN_1}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="28" splitType="Stretch">
+			<textField evaluationTime="Report">
+				<reportElement style="VNTextNoBorder" x="292" y="0" width="40" height="20" uuid="3b00af95-b9eb-4275-b67e-bb8d89c59d4a"/>
+				<textElement>
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="VNTextNoBorder" x="212" y="0" width="80" height="20" uuid="0e0c2d1a-e4cd-4a4d-9a49-bdf0f450c18f"/>
+				<textElement textAlignment="Right">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="210" splitType="Stretch">
+			<staticText>
+				<reportElement style="VNTextNoBorder" x="52" y="52" width="129" height="25" uuid="eac612e8-fbc6-4d89-a5ce-197424b84f01"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="12" isBold="false" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[(Ký và ghi rõ họ tên)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="VNTextNoBorder" x="332" y="27" width="129" height="25" uuid="7a069f04-355f-4a7f-ba40-94a1da7bdc2f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Xác nhận của thủ thư]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="VNTextNoBorder" x="52" y="27" width="129" height="25" uuid="b263bff4-965a-49e3-b8ee-9054dc433256"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Người lập]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="VNTextNoBorder" x="332" y="52" width="129" height="25" uuid="e9d563aa-7541-4cfa-a3f6-c115b12540cd"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="12" isBold="false" isItalic="true" pdfEncoding="Cp1252"/>
+				</textElement>
+				<text><![CDATA[(Ký và ghi rõ họ tên)]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>
